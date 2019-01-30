@@ -1,0 +1,23 @@
+{
+  "name": "kevin_website",
+  "version": "1.0.0",
+  "description": "Making a website for Kevin",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -wo static/ --recur",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrisbb95/kevin_website.git"
+  },
+  "author": "Christopher Basketfield",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chrisbb95/kevin_website/issues"
+  },
+  "homepage": "https://github.com/chrisbb95/kevin_website#readme",
+  "dependencies": {
+    "node-sass": "^4.11.0"
+  }
+}
