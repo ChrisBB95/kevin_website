@@ -1,0 +1,27 @@
+--PAGES--
+
+Header == [ Home | Gallery | Shop ]
+
+Chris Burkard site for inspiration
+
+	--HOME PAGE--
+	Big Landscape Image
+	Vimeo Links
+
+	-- GALLERY --
+	big ol' slideshow
+
+	--   SHOP  --
+	should be a functional shop
+		-db for products
+		-validation for purchases
+		-maybe some paypal something?
+
+	-- CONTACT --
+	phone | email | picture of kevkev
+
+--STYLING--
+simple
+images are borderless
+long scrolling page, wide margins
+modern sans-serif font
