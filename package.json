@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/chrisbb95/kevin_website#readme",
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "node-sass": "^4.11.0"
   }
 }
