@@ -4,8 +4,7 @@
   "description": "Making a website for Kevin",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w scss/ -wo static/ --recur",
-    "deploy": "gh-pages -d dist"
+    "sass": "node-sass -w scss/ -wo static/css/ --recur"
   },
   "repository": {
     "type": "git",

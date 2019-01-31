@@ -6,7 +6,7 @@ from .models import Home_Image
 
 def home_view(request):
     context = {
-        'home_image': Home_Image.objects.first()
+        'home_image': Home_Image.objects.first().image.url
 
     }
     return render(request, 'home.html', context)
