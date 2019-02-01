@@ -7,6 +7,6 @@ from .models import Home_Image, Vimeo_Link
 def home_view(request):
     context = {
         'home_image': Home_Image.objects.first().image.url,
-        'vimeo_link': Vimeo_Link.objects.first().video
+        'vimeo_links': Vimeo_Link.objects.all()
     }
     return render(request, 'home.html', context)
