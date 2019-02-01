@@ -17,11 +17,13 @@
         <br>
     </div>
 
-    {% for link in vimeo_links %}
-    <div class="video-wrapper">
-        <iframe class='embedded-vimeo' src="{{link.video}}" frameborder="0" allowfullscreen></iframe>
-    </div>
+    <div class="videos">
+        {% for link in vimeo_links %}
+        <div class="video-wrapper">
+            <iframe class='embedded-vimeo' src="{{link.video}}" frameborder="0" allowfullscreen></iframe>
+        </div>
     {% endfor %}
+    </div>
     
 </main>
 {% endblock content %}
