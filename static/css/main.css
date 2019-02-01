@@ -63,13 +63,14 @@ main {
       width: 100%;
       height: 100%; }
   main .header {
-    margin: 3px 0.5rem;
+    margin: 1rem 0.5rem;
     font-size: 5vw; }
   main .gallery {
     margin: 0 0.5rem; }
     main .gallery .gallery-image-container {
       display: inline-block;
-      width: 33%; }
+      width: 32%;
+      margin: 0.2rem; }
       main .gallery .gallery-image-container .gallery-image {
         height: 100%;
         width: 100%; }
