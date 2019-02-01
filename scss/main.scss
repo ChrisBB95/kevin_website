@@ -83,7 +83,22 @@ main {
 }
 
 .footer {
-  position: relative;
   width: 100%;
+  height: 150px;
   padding: 1rem;
+  
+  .footer-info {
+    width: 45%;
+    float: left;
+  }
+
+  .copyright-container {
+    width: 45%;
+    float: right;
+
+    .copyright {
+      float: right;
+    }
+  }
+
 }
