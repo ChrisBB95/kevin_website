@@ -86,6 +86,23 @@ main {
       }
     }
   }
+
+  .header {
+    margin: 3px 0.5rem;
+    font-size: 5vw;
+  }
+
+  .gallery {
+    margin: 0 0.5rem;
+    .gallery-image-container {
+      display: inline-block;
+      width: 33%;
+      .gallery-image {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
 }
 
 .footer {
