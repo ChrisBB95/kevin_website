@@ -39,9 +39,11 @@ main {
     padding: 1rem;
     color: #2b2b2b; }
     main .title-card .title {
+      text-align: right;
       margin: 3px 0;
       font-size: 5vw; }
     main .title-card .subtitle {
+      text-align: right;
       margin: 2px 0;
       font-size: 2vw; }
   main .home-image {
