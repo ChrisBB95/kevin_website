@@ -1,4 +1,6 @@
 from django.db import models
+from django.db.models.signals import post_delete
+from .utils import file_cleanup
 
 # Create your models here.
 
@@ -11,3 +13,7 @@ class Gallery_Image(models.Model):
 
     def __str__(self):
         return self.title
+
+
+post_delete.connect(file_cleanup, sender=Gallery_Image,
+                    dispatch_uid="gallery.image.file_cleanup")
