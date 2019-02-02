@@ -1,7 +1,7 @@
+import os
 from django.db import models
-from django.db.models.signals import post_delete
-from .utils import file_cleanup
-
+from django.dispatch import receiver
+from django.utils.translation import ugettext_lazy as _
 # Create your models here.
 
 
@@ -23,5 +23,33 @@ class Vimeo_Link(models.Model):
         return self.title
 
 
-post_delete.connect(file_cleanup, sender=Home_Image,
-                    dispatch_uid="gallery.image.file_cleanup")
+@receiver(models.signals.post_delete, sender=Home_Image)
+def auto_delete_file_on_delete(sender, instance, **kwargs):
+    """
+    Deletes file from filesystem
+    when corresponding `Gallery_Image` object is deleted.
+    """
+    if instance.image:
+        if os.path.isfile(instance.image.path):
+            os.remove(instance.image.path)
+
+
+@receiver(models.signals.pre_save, sender=Home_Image)
+def auto_delete_file_on_change(sender, instance, **kwargs):
+    """
+    Deletes old file from filesystem
+    when corresponding `Home_Image` object is updated
+    with new file.
+    """
+    if not instance.pk:
+        return False
+
+    try:
+        old_file = Home_Image.objects.get(pk=instance.pk).image
+    except Home_Image.DoesNotExist:
+        return False
+
+    new_file = instance.image
+    if not old_file == new_file:
+        if os.path.isfile(old_file.path):
+            os.remove(old_file.path)
