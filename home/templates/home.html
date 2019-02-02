@@ -1,5 +1,4 @@
 {% include 'base.html' %}
-{% load static %}
 
 {% block content %}
 <main class='main'>
@@ -9,7 +8,7 @@
         <h3 class="subtitle">111-222-1234</h3>
     </div>
 
-    <img class='home-image' src="{% static home_image%}" alt="home image">
+    <img class='home-image' src="{{home_image}}" alt="home image">
 
     <div class="about">
         <h2 class="about-title">About Kevin Or Something</h2>

@@ -9,7 +9,7 @@ from django.utils.translation import ugettext_lazy as _
 class Gallery_Image(models.Model):
     title = models.CharField(max_length=30, blank=True, null=True)
     image = models.ImageField(
-        upload_to="static/", blank=True, null=True)
+        upload_to="", blank=True, null=True)
     description = models.CharField(max_length=140, blank=True, null=True)
 
     def __str__(self):
