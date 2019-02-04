@@ -37,7 +37,7 @@ def auto_delete_file_on_change(sender, instance, **kwargs):
         return False
 
     try:
-        old_file = Home_Image.objects.get(pk=instance.pk).image
+        old_file = sender.objects.get(pk=instance.pk).image
     except Home_Image.DoesNotExist:
         return False
 
