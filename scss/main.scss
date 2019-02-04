@@ -107,11 +107,10 @@ main {
     .product-container {
       display: inline-block;
       background: #2b2b2b;
-      max-width: 350px;
+      max-width: 340px;
       margin: 1rem;
       .product-title {
-        padding-top: 1rem;
-        padding-left: 1rem;
+        padding-left: 1.25rem;
       }
 
       .product-image {
@@ -120,6 +119,8 @@ main {
       }
 
       .product-info {
+        float: left;
+        width: 40%;
         list-style: none;
         margin: 0;
         padding: 0;
@@ -132,10 +133,11 @@ main {
         .product-description {
           margin-bottom: 0.5rem;
         }
+      }
 
-        .add-to-cart {
-          margin-bottom: 1rem;
-        }
+      .add-to-cart {
+        float: right;
+        margin: 1.25rem;
       }
     }
   }
