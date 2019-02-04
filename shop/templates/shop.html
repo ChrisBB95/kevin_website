@@ -6,6 +6,22 @@
     <div class="title-card">
         <h1 class="title">Shop</h1>
     </div>
+
+    <div class="product-section">
+        {% for product in products %}
+        <div class="product-container">
+            <h3 class="product-title">{{product.title}}</h3>
+            <img class='product-image' src="{{product.image.url}}" alt="{{ product.title }}">
+            <ul class="product-info">
+                <li class="product-price">Price: ${{product.price}}</li>
+                <li class="product-description">{{product.description}}</li>
+                <button class="add-to-cart">Add to Cart</button>
+            </ul>
+         </div>
+    {% endfor %}
+
 </main>
 
 {% endblock content %}
+
+{% include 'footer.html' %}
