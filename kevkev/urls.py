@@ -8,7 +8,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 # app urls
 from home.views import home_view
 from gallery.views import gallery_view
-from shop.views import shop_view
+from shop.views import shop_view, add_to_cart, view_cart
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -16,6 +16,8 @@ urlpatterns = [
     path('home/', home_view, name='home'),
     path('gallery/', gallery_view, name='gallery'),
     path('shop/', shop_view, name='shop'),
+    path('shop/add', add_to_cart, name='add'),
+    path('shop/view', view_cart, name='view'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

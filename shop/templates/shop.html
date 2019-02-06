@@ -16,7 +16,10 @@
                 <li class="product-price">$ {{product.price}}</li>
                 <li class="product-description">{{product.description}}</li>
             </ul>
-            <button class="add-to-cart">Add to Cart</button>
+            <form action="/shop/add" method="post"> {% csrf_token %} 
+            <input type="hidden" name="item_id" value="{{product.title}}">
+                <input type="submit" value="Add to Cart" class="add-to-cart">
+            </form>
          </div>
     {% endfor %}
 
