@@ -80,43 +80,55 @@ main {
       main .gallery .gallery-image-container .gallery-image {
         height: 100%;
         width: 100%; }
-  main .product-section {
-    color: #fff; }
-    main .product-section .product-container {
-      display: inline-block;
-      background: #2b2b2b;
-      max-width: 340px;
-      margin: 1rem; }
-      main .product-section .product-container .product-title {
-        padding-left: 1.25rem; }
-      main .product-section .product-container .product-image {
-        max-width: 300px;
-        margin: 0 1.25rem; }
-      main .product-section .product-container .product-info {
-        float: left;
-        width: 40%;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        margin-left: 1.25rem;
-        margin-top: 0.5rem; }
-        main .product-section .product-container .product-info .product-price {
-          margin-bottom: 0.5rem; }
-        main .product-section .product-container .product-info .product-description {
-          margin-bottom: 0.5rem; }
-      main .product-section .product-container .add-to-cart {
-        float: right;
-        margin: 1.25rem; }
-  main .cart-items .cart-item {
-    background: #9b9b9b; }
+  main .product-section .product-container {
+    display: inline-block;
+    border: solid #2b2b2b 0.2rem;
+    max-width: 340px;
+    margin: 1rem; }
+    main .product-section .product-container .product-title {
+      padding-left: 1.25rem;
+      text-align: center; }
+    main .product-section .product-container .product-image {
+      max-width: 300px;
+      margin: 0 1.25rem;
+      border: #000 solid 0.1rem; }
+    main .product-section .product-container .product-info {
+      float: left;
+      width: 40%;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      margin-left: 1.25rem;
+      margin-top: 0.5rem;
+      font-weight: bold; }
+      main .product-section .product-container .product-info .product-price {
+        margin-bottom: 0.5rem; }
+      main .product-section .product-container .product-info .product-description {
+        margin-bottom: 0.5rem; }
+    main .product-section .product-container .add-to-cart {
+      float: right;
+      margin: 1.25rem;
+      background: #7c7c7c;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      text-align: center; }
   main .cart-nav .cart-nav-form {
     width: 100px;
-    margin: 0.3rem;
+    margin: 1rem;
     display: inline-block; }
     main .cart-nav .cart-nav-form .back-to-shop {
-      margin: 0.2rem; }
+      background: #2b2b2b;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      text-align: center; }
     main .cart-nav .cart-nav-form .checkout {
-      margin: 0.2rem; }
+      background: #2b2b2b;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      text-align: center; }
 
 .footer {
   width: 100%;
