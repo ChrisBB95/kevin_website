@@ -17,7 +17,7 @@ urlpatterns = [
     path('gallery/', gallery_view, name='gallery'),
     path('shop/', shop_view, name='shop'),
     path('shop/add/<int:item_id>/', add_to_cart, name='add'),
-    path('shop/view', view_cart, name='view'),
+    path('shop/cart/', view_cart, name='cart'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

@@ -1,10 +1,13 @@
 {% include 'base.html' %}
+{% load static%}
 
 {% block content %}
 
 <main>
     <div class="title-card">
-        <img src="../media/cart.png" alt="shopping cart" class="shopping-cart">
+        <a href="/shop/cart/">
+            <img src="{% static "cart.png"%}" alt="shopping cart" class="shopping-cart">
+        </a>
         <h1 class="title">Shop</h1>
     </div>
 
