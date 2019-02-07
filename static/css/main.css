@@ -83,11 +83,13 @@ main {
   main .product-section .product-container {
     display: inline-block;
     border: solid #2b2b2b 0.2rem;
+    border-radius: 5px;
     max-width: 340px;
     margin: 1rem; }
     main .product-section .product-container .product-title {
       padding-left: 1.25rem;
-      text-align: center; }
+      text-align: center;
+      font-size: 24px; }
     main .product-section .product-container .product-image {
       max-width: 300px;
       margin: 0 1.25rem;
@@ -108,9 +110,10 @@ main {
     main .product-section .product-container .add-to-cart {
       float: right;
       margin: 1.25rem;
-      background: #7c7c7c;
+      background: #2b2b2b;
       color: #fff;
       border: none;
+      border-radius: 50px;
       padding: 8px 16px;
       text-align: center; }
   main .cart-nav .cart-nav-form {
@@ -122,13 +125,15 @@ main {
       color: #fff;
       border: none;
       padding: 8px 16px;
-      text-align: center; }
+      text-align: center;
+      border-radius: 50px; }
     main .cart-nav .cart-nav-form .checkout {
       background: #2b2b2b;
       color: #fff;
       border: none;
       padding: 8px 16px;
-      text-align: center; }
+      text-align: center;
+      border-radius: 50px; }
 
 .footer {
   width: 100%;
