@@ -16,7 +16,7 @@ urlpatterns = [
     path('home/', home_view, name='home'),
     path('gallery/', gallery_view, name='gallery'),
     path('shop/', shop_view, name='shop'),
-    path('shop/add', add_to_cart, name='add'),
+    path('shop/add/<int:item_id>/', add_to_cart, name='add'),
     path('shop/view', view_cart, name='view'),
 ]
 

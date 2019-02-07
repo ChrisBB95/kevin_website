@@ -18,9 +18,12 @@ def shop_view(request):
     return render(request, 'shop.html', context)
 
 
-def add_to_cart(request, item_id, quantity):
+def add_to_cart(request, item_id):
     cart = request.session.get('cart', {})
-    cart[item_id] = quantity
+    if item_id in cart.keys():
+        cart[item_id] += 1
+    else:
+        cart[item_id] = 1
     request.session['cart'] = cart
 
     context = {
