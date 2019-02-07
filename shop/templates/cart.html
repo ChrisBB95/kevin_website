@@ -10,12 +10,21 @@
 
     <hr class='cart-items-bound'>
     <div class="cart-items">
+    <table class="cart-table">
+        <tr>
+            <th class="cart-table-header">Items</th>
+            <th class="cart-table-header">Quantity</th>
+            <th class="cart-tale-header">Cost</th>
+        </tr>
         {% for item in products %}
-            <div class="cart-item">
-                <h1>{{item.0}}: {{item.1}}</h1>
-            </div>
-            <hr class='cart-items-bound'>
+            <tr class="cart-item">
+                <td>{{item.0}}</td>
+                <td>{{item.1}}</td>
+                <td>${{item.2}}</td>
+            </tr>
         {% endfor %}
+    </table>
+    <p class="total-cost">Total: ${{total}}</p>
     </div>
     
     <br>

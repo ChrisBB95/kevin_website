@@ -20,10 +20,7 @@ def shop_view(request):
 
 def add_to_cart(request, item_id):
     cart = request.session.get('cart', {})
-    if item_id in cart.keys():
-        cart[item_id] += 1
-    else:
-        cart[item_id] = 1
+    cart[item_id] = 1
     request.session['cart'] = cart
 
     context = {
@@ -42,8 +39,11 @@ def view_cart(request):
 
     products = []
     for key, value in cart.items():
-        products.append((Product.objects.get(item_id=key).title, value))
+        products.append((Product.objects.get(item_id=key).title,
+                         value,
+                         Product.objects.get(item_id=key).price))
 
     context['products'] = products
+    context['total'] = sum([product[2] for product in products])
 
     return render(request, 'cart.html', context)
