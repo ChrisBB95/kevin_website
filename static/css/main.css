@@ -38,6 +38,12 @@ main {
     position: relative;
     padding: 1rem 2rem;
     color: #2b2b2b; }
+    main .title-card .shopping-cart {
+      position: absolute;
+      right: 13.5vw;
+      width: 5vw;
+      height: 5vw;
+      margin-right: 1.5rem; }
     main .title-card .title {
       text-align: right;
       margin: 3px 0;
