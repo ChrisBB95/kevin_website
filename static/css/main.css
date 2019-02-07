@@ -107,6 +107,16 @@ main {
       main .product-section .product-container .add-to-cart {
         float: right;
         margin: 1.25rem; }
+  main .cart-items .cart-item {
+    background: #9b9b9b; }
+  main .cart-nav .cart-nav-form {
+    width: 100px;
+    margin: 0.3rem;
+    display: inline-block; }
+    main .cart-nav .cart-nav-form .back-to-shop {
+      margin: 0.2rem; }
+    main .cart-nav .cart-nav-form .checkout {
+      margin: 0.2rem; }
 
 .footer {
   width: 100%;

@@ -8,6 +8,7 @@
         <h1 class="title">Cart</h1>
     </div>
 
+    <hr class='cart-items-bound'>
     <div class="cart-items">
         {% for item in products %}
             <div class="cart-item">
@@ -15,10 +16,15 @@
             </div>
         {% endfor %}
     </div>
+    <hr class='cart-items-bound'>
     <br>
     <div class="cart-nav">
-        <button class="back-to-shop">Back to Shop</button>
-        <button class="checkout">Checkout</button>
+        <form action="/shop/" class="cart-nav-form">
+            <input type="submit" value="Keep Shopping" class="back-to-shop">
+        </form>
+        <form action="/checkout/" class="cart-nav-form">
+            <input type="submit" value="Checkout" class="checkout">
+        </form>
     </div>
 </main>
 

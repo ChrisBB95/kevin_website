@@ -150,6 +150,26 @@ main {
       }
     }
   }
+
+  .cart-items {
+    .cart-item {
+      background: #9b9b9b;
+    }
+  }
+
+  .cart-nav {
+    .cart-nav-form {
+      width: 100px;
+      margin: 0.3rem;
+      display: inline-block;
+      .back-to-shop {
+        margin: 0.2rem;
+      }
+      .checkout {
+        margin: 0.2rem;
+      }
+    }
+  }
 }
 
 .footer {
