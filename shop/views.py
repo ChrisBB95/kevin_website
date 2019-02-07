@@ -35,9 +35,15 @@ def add_to_cart(request, item_id):
 
 
 def view_cart(request):
+    cart = request.session.get('cart', {})
     context = {
-        'products': Product.objects.all(),
-        'cart': request.session.get('cart', {})
+        'cart': cart
     }
+
+    products = []
+    for key, value in cart.items():
+        products.append((Product.objects.get(item_id=key).title, value))
+
+    context['products'] = products
 
     return render(request, 'cart.html', context)

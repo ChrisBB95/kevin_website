@@ -9,13 +9,17 @@
     </div>
 
     <div class="cart-items">
-        {% for key,value in cart.items %}
+        {% for item in products %}
             <div class="cart-item">
-                <h1>{{key}}: {{value}}</h1>
+                <h1>{{item.0}}: {{item.1}}</h1>
             </div>
         {% endfor %}
     </div>
-
+    <br>
+    <div class="cart-nav">
+        <button class="back-to-shop">Back to Shop</button>
+        <button class="checkout">Checkout</button>
+    </div>
 </main>
 
 {% endblock content %}
