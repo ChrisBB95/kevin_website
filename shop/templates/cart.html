@@ -5,26 +5,42 @@
 
 <main>
     <div class="title-card">
+    <a href="/shop/">
+            <img src="{% static "cart.png"%}" alt="shopping cart" class="shopping-cart">
+        </a>
         <h1 class="title">Cart</h1>
     </div>
 
-    <hr class='cart-items-bound'>
     <div class="cart-items">
-    <table class="cart-table">
-        <tr>
-            <th class="cart-table-header">Items</th>
-            <th class="cart-table-header">Quantity</th>
-            <th class="cart-tale-header">Cost</th>
-        </tr>
-        {% for item in products %}
-            <tr class="cart-item">
-                <td>{{item.0}}</td>
-                <td>{{item.1}}</td>
-                <td>${{item.2}}</td>
+    <hr>
+        <table class="cart-table">
+            <tr class='header-row'>
+                <th class="cart-table-header">Items</th>
+                <th class="cart-table-header">Quantity</th>
+                <th class="cart-tale-header">Cost</th>
+                <th class="cart-tale-header"></th>
             </tr>
-        {% endfor %}
-    </table>
-    <p class="total-cost">Total: ${{total}}</p>
+            {% for item in products %}
+                <tr class="cart-item">
+                    <td class='item-cell'>{{item.0}}</td>
+                    <td class='item-cell'>{{item.1}}
+                        <form action="" class="add-sub-form">
+                            <input type="submit" value="+" class="add-button">
+                        </form>
+                        <form action="" class="add-sub-form">
+                            <input type="submit" value="-" class="sub-button">
+                        </form>
+                    </td>
+                    <td class='item-cell'>${{item.2}}</td>
+                    <td class='item-cell'>
+                        <form action="/shop/cart/remove" class="remove-item-form">
+                            <input type="submit" value='Remove' class='remove-item'>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+        <p class="total-cost">Total: ${{total}}</p>
     </div>
     
     <br>
