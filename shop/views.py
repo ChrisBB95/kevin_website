@@ -52,7 +52,7 @@ def view_cart(request):
 
 def remove_from_cart(request, item_id):
     cart = request.session.get('cart', {})
-    del cart[item_id]
+    del cart[str(item_id)]
     request.session['cart'] = cart
 
     context = {
