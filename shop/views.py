@@ -70,3 +70,48 @@ def remove_from_cart(request, item_id):
     context['total'] = sum([product[2] for product in products])
 
     return render(request, 'cart.html', context)
+
+def add_one(request, item_id):
+    cart = request.session.get('cart', {})
+    cart[str(item_id)] += 1
+    request.session['cart'] = cart
+
+    context = {
+        'cart': cart
+    }
+
+    products = []
+    for key, value in cart.items():
+        products.append((Product.objects.get(item_id=key).title,
+                         value,
+                         Product.objects.get(item_id=key).price,
+                         key))
+
+    context['products'] = products
+    context['total'] = sum([product[2] for product in products])
+
+    return render(request, 'cart.html', context)
+
+def sub_one(request, item_id):
+    cart = request.session.get('cart', {})
+    cart[str(item_id)] -= 1
+
+    if cart[str(item_id)]==0:
+        del cart[str(item_id)]
+    request.session['cart'] = cart
+
+    context = {
+        'cart': cart
+    }
+
+    products = []
+    for key, value in cart.items():
+        products.append((Product.objects.get(item_id=key).title,
+                         value,
+                         Product.objects.get(item_id=key).price,
+                         key))
+
+    context['products'] = products
+    context['total'] = sum([product[2] for product in products])
+
+    return render(request, 'cart.html', context)

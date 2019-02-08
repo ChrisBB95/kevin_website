@@ -24,16 +24,16 @@
                 <tr class="cart-item">
                     <td class='item-cell'>{{item.0}}</td>
                     <td class='item-cell'>{{item.1}}
-                        <form action="" class="add-sub-form">
+                        <form action="/shop/cart/add/{{item.3}}/" class="add-sub-form">
                             <input type="submit" value="+" class="add-button">
                         </form>
-                        <form action="" class="add-sub-form">
+                        <form action="/shop/cart/sub/{{item.3}}/" class="add-sub-form">
                             <input type="submit" value="-" class="sub-button">
                         </form>
                     </td>
                     <td class='item-cell'>${{item.2}}</td>
                     <td class='item-cell'>
-                        <form action="/shop/cart/remove/{{item.3}}" class="remove-item-form">
+                        <form action="/shop/cart/remove/{{item.3}}/" class="remove-item-form">
                             <input type="submit" value='Remove' class='remove-item'>
                         </form>
                     </td>

@@ -16,7 +16,6 @@ class Product(models.Model):
     def __str__(self):
         return self.title
 
-
 @receiver(models.signals.post_delete, sender=Product)
 def submission_delete(sender, instance, **kwargs):
     instance.image.delete(False)
