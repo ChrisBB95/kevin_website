@@ -58,6 +58,8 @@ main {
       height: 5vw;
       margin-right: 1.5rem;
       margin-top: 0.3rem;
+      background: #fff;
+      border-radius: 15px;
     }
 
     .title {
@@ -175,11 +177,11 @@ main {
 
       .cart-item {
         .item-cell {
-          padding: 0.5rem;
+          padding: 0.3rem;
 
           .add-sub-form {
             display: inline-block;
-            padding-left: 0.5rem;
+            padding-left: 0.1rem;
             .add-button {
               background: #5b5b5b;
               color: #fff;
