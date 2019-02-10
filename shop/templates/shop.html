@@ -14,15 +14,22 @@
     <div class="product-section">
         {% for product in products %}
         <div class="product-container">
+        <hr>
             <h3 class="product-title">{{product.title}}</h3>
-            <img class='product-image' src="{{product.image.url}}" alt="{{ product.title }}">
-            <ul class="product-info">
-                <li class="product-price">$ {{product.price}}</li>
-                <li class="product-description">{{product.description}}</li>
-            </ul>
-            <form action="/shop/add/{{product.item_id}}/" method="post"> {% csrf_token %} 
-                <input type="submit" value="Add to Cart" class="add-to-cart">
-            </form>
+            <div class="product-body">
+                <div class="image-container">
+                    <img class='product-image' src="{{product.image.url}}" alt="{{ product.title }}">
+                </div>
+                <div class="about-product">
+                    <ul class="product-info">
+                        <li class="product-price">${{product.price}}</li>
+                        <li class="product-description">{{product.description}}</li>
+                    </ul>
+                    <form action="/shop/add/{{product.item_id}}/" method="post" class='add-to-cart-form'> {% csrf_token %} 
+                        <input type="submit" value="Add to Cart" class="add-to-cart">
+                    </form>
+                </div>
+            </div>
          </div>
     {% endfor %}
 
