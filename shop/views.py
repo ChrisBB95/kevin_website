@@ -117,3 +117,13 @@ def sub_one(request, item_id):
     context['total'] = sum([product[2] for product in products])
 
     return render(request, 'cart.html', context)
+
+
+def checkout(request):
+    cart = request.session.get('cart', {})
+
+    context = {
+        'cart': cart
+    }
+
+    return render(request, 'checkout.html', context)
