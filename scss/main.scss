@@ -172,12 +172,15 @@ main {
     .cart-display {
       flex: 0.8;
       .cart-table {
+        border: solid #000 0.1rem;
         .header-row {
           .cart-table-header {
+            text-align: left;
           }
         }
         .cart-item {
           .item-cell {
+            border-top: solid #000 0.1rem;
           }
         }
       }

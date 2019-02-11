@@ -116,6 +116,12 @@ main {
       flex: 1.2; }
     main .checkout-area .cart-display {
       flex: 0.8; }
+      main .checkout-area .cart-display .cart-table {
+        border: solid #000 0.1rem; }
+        main .checkout-area .cart-display .cart-table .header-row .cart-table-header {
+          text-align: left; }
+        main .checkout-area .cart-display .cart-table .cart-item .item-cell {
+          border-top: solid #000 0.1rem; }
   main .cart-items {
     padding: 1rem; }
     main .cart-items .cart-table .header-row .cart-table-header {
