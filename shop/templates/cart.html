@@ -59,7 +59,7 @@
                 <input type="hidden" name="quantity_{{forloop.counter}}" value="{{item.1}}">
                 <input type="hidden" name="amount_{{forloop.counter}}" value="{{item.2}}">
             {% endfor %}
-            <input type="image" src="http://www.paypal.com/en_US/i/btn/x-click-but01.gif" name="submit" alt="Make payments with PayPal - it's fast, free and secure!" class='checkout-image'>
+            <input type="image" src="{% static 'paypal-buy-now-button.png'%}" name="submit" alt="Make payments with PayPal - it's fast, free and secure!" class='checkout-image'>
         </form>
     </div>
 </main>
