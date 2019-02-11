@@ -8,21 +8,19 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 # app urls
 from home.views import home_view
 from gallery.views import gallery_view
-from shop.views import shop_view, add_to_cart, view_cart, remove_from_cart, add_one, sub_one, checkout
+from shop.views import shop_view, add_to_cart, view_cart, remove_from_cart, add_one, sub_one
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_view, name='home'),
     path('home/', home_view, name='home'),
     path('gallery/', gallery_view, name='gallery'),
-    path('paypal/', include('paypal.standard.ipn.urls'), name='paypal'),
     path('shop/', shop_view, name='shop'),
     path('shop/add/<int:item_id>/', add_to_cart, name='add'),
     path('shop/cart/remove/<int:item_id>/', remove_from_cart, name='remove'),
     path('shop/cart/add/<int:item_id>/', add_one, name='addone'),
     path('shop/cart/sub/<int:item_id>/', sub_one, name='sub'),
     path('shop/cart/', view_cart, name='cart'),
-    path('shop/checkout/', checkout, name='checkout'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

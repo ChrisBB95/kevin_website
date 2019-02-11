@@ -163,32 +163,6 @@ main {
     }
   }
 
-  .checkout-area {
-    display: flex;
-    .checkout-info {
-      flex: 1.2;
-    }
-
-    .cart-display {
-      flex: 0.8;
-      .cart-table {
-        border: solid #000 0.1rem;
-        .header-row {
-          .cart-table-header {
-            text-align: left;
-          }
-        }
-        .cart-item {
-          .item-cell {
-            border-top: solid #000 0.1rem;
-          }
-        }
-      }
-      .total {
-      }
-    }
-  }
-
   .cart-items {
     padding: 1rem;
     .cart-table {
@@ -246,10 +220,12 @@ main {
   }
 
   .cart-nav {
+    width: 300px;
+    display: flex;
     .cart-nav-form {
       width: 100px;
       margin: 1rem;
-      display: inline-block;
+      flex: 1;
       .back-to-shop {
         background: #2b2b2b;
         color: #fff;
@@ -258,13 +234,13 @@ main {
         text-align: center;
         border-radius: 50px;
       }
-      .checkout {
-        background: #2b2b2b;
-        color: #fff;
-        border: none;
-        padding: 8px 16px;
-        text-align: center;
-        border-radius: 50px;
+    }
+    .checkout {
+      flex: 1;
+      align-self: center;
+      .checkout-image {
+        margin-top: 0.2rem;
+        width: 80px;
       }
     }
   }
