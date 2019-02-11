@@ -82,11 +82,11 @@ def add_one(request, item_id):
     }
 
     products = []
-    for key, value in cart.items():
-        products.append((Product.objects.get(item_id=key).title,
-                         value,
-                         Product.objects.get(item_id=key).price*value,
-                         key))
+    for id, quantity in cart.items():
+        products.append((Product.objects.get(item_id=id).title,
+                         quantity,
+                         Product.objects.get(item_id=id).price*quantity,
+                         id))
 
     context['products'] = products
     context['total'] = sum([product[2] for product in products])
@@ -110,7 +110,7 @@ def sub_one(request, item_id):
     for id, quantity in cart.items():
         products.append((Product.objects.get(item_id=id).title,
                          quantity,
-                         Product.objects.get(item_id=key).price*quantity,
+                         Product.objects.get(item_id=id).price*quantity,
                          id))
 
     context['products'] = products
