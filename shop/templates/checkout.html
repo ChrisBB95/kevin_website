@@ -8,6 +8,34 @@
         <h1 class="title">Checkout</h1>
     </div>
     <hr>
+
+    <div class="checkout-area">
+
+        <div class="checkout-info">
+            <h1>Put a Checkout Form Here</h1>
+        </div>
+
+        <div class="cart-display">
+            <table class="cart-table">
+                <tr class='header-row'>
+                    <th class="cart-table-header">Product</th>
+                    <th class="cart-table-header">Quantity</th>
+                    <th class="cart-tale-header">Price</th>
+                    <th class="cart-tale-header"></th>
+                </tr>
+                {% for item in cart %}
+                    <tr class="cart-item">
+                        <td class='item-cell'>{{item.0}}</td>
+                        <td class='item-cell'>{{item.1}}</td>
+                        <td class='item-cell'>${{item.2}}</td>
+                        <td class='item-cell'>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        <p class='total'>Total: ${{total}}</p>
+        </div>
+    </div>
 {% endblock content %}
 
 {% include 'footer.html' %}
