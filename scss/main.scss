@@ -61,6 +61,13 @@ main {
       background: #fff;
       border-radius: 15px;
     }
+    .cart-size {
+      position: absolute;
+      right: 17.7vw;
+      top: 20.5px;
+      font-weight: bold;
+      pointer-events: none;
+    }
 
     .title {
       text-align: right;

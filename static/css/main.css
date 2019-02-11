@@ -47,6 +47,12 @@ main {
       margin-top: 0.3rem;
       background: #fff;
       border-radius: 15px; }
+    main .title-card .cart-size {
+      position: absolute;
+      right: 17.7vw;
+      top: 20.5px;
+      font-weight: bold;
+      pointer-events: none; }
     main .title-card .title {
       text-align: right;
       margin: 3px 0;
