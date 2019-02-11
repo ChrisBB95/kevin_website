@@ -8,10 +8,12 @@
 
     <div class="gallery">
         {% for gallery_image in gallery_images %}
-        <div class="gallery-image-container">
-            <img class='gallery-image' src="{{gallery_image.image.url}}" alt="{{ gallery_image.title }}">
-         </div>
-    {% endfor %}
+            <div class="gallery-image-container">
+                <img class='gallery-image' src="{{gallery_image.image.url}}" alt="{{ gallery_image.title }}">
+            </div>
+        {% empty %}
+        <p class="coming-soon">Coming Soon!</p>
+        {% endfor %}
     </div>
     
 </main>

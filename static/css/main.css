@@ -88,6 +88,8 @@ main {
       main .gallery .gallery-image-container .gallery-image {
         height: 100%;
         width: 100%; }
+  main .product-section .coming-soon {
+    margin-left: 1rem; }
   main .product-section .product-container .product-title {
     margin: 1rem; }
   main .product-section .product-container .product-body {
