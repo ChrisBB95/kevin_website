@@ -89,8 +89,6 @@ main {
       margin: 0.2rem; }
       main .gallery .gallery-image-container:first-child, main .gallery .gallery-image-container:nth-child(5n + 7) {
         flex-basis: 90%; }
-      main .gallery .gallery-image-container:nth-child(5n + 5) {
-        flex-basis: 45%; }
       main .gallery .gallery-image-container .gallery-image {
         height: 100%;
         width: 100%; }
