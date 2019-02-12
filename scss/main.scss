@@ -63,8 +63,8 @@ main {
     }
     .cart-size {
       position: absolute;
-      right: 17.7vw;
-      top: 20.5px;
+      right: 17.5vw;
+      top: 2vw;
       font-weight: bold;
       pointer-events: none;
     }
@@ -109,10 +109,19 @@ main {
 
   .gallery {
     margin: 0 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
     .gallery-image-container {
-      display: inline-block;
-      width: 32%;
+      flex: 1;
+      flex-basis: 30%;
       margin: 0.2rem;
+
+      &:first-child {
+        flex-basis: 90%;
+      }
+      &:nth-child(4n + 4) {
+        flex-basis: 45%;
+      }
       .gallery-image {
         height: 100%;
         width: 100%;

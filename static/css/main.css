@@ -49,8 +49,8 @@ main {
       border-radius: 15px; }
     main .title-card .cart-size {
       position: absolute;
-      right: 17.7vw;
-      top: 20.5px;
+      right: 17.5vw;
+      top: 2vw;
       font-weight: bold;
       pointer-events: none; }
     main .title-card .title {
@@ -80,11 +80,17 @@ main {
       width: 100%;
       height: 100%; }
   main .gallery {
-    margin: 0 0.5rem; }
+    margin: 0 0.5rem;
+    display: flex;
+    flex-wrap: wrap; }
     main .gallery .gallery-image-container {
-      display: inline-block;
-      width: 32%;
+      flex: 1;
+      flex-basis: 30%;
       margin: 0.2rem; }
+      main .gallery .gallery-image-container:first-child {
+        flex-basis: 90%; }
+      main .gallery .gallery-image-container:nth-child(4n + 4) {
+        flex-basis: 45%; }
       main .gallery .gallery-image-container .gallery-image {
         height: 100%;
         width: 100%; }
