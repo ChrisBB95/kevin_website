@@ -38,21 +38,16 @@ main {
     position: relative;
     padding: 1rem 2rem;
     color: #2b2b2b; }
-    main .title-card .shopping-cart {
-      position: absolute;
-      right: 13.7vw;
-      width: 5vw;
-      height: 5vw;
-      margin-right: 1.5rem;
-      margin-top: 0.3rem;
-      background: #fff;
-      border-radius: 15px; }
-    main .title-card .cart-size {
-      position: absolute;
-      right: 17.5vw;
-      top: 2vw;
-      font-weight: bold;
-      pointer-events: none; }
+    main .title-card .cart-and-title {
+      display: flex;
+      justify-content: flex-end; }
+      main .title-card .cart-and-title .cart-logo {
+        flex-basis: 5%; }
+        main .title-card .cart-and-title .cart-logo .shopping-cart {
+          height: 6vw;
+          width: 6vw; }
+      main .title-card .cart-and-title .title {
+        flex-basis: 15%; }
     main .title-card .title {
       text-align: right;
       margin: 3px 0;
@@ -140,7 +135,8 @@ main {
           border: none;
           padding: 4px 8px;
           text-align: center;
-          border-radius: 5px; }
+          border-radius: 5px;
+          cursor: pointer; }
         main .cart-items .cart-table .cart-item .item-cell .add-sub-form .sub-button {
           background: #5b5b5b;
           color: #fff;
@@ -148,7 +144,8 @@ main {
           border: none;
           padding: 4px 9.5px;
           text-align: center;
-          border-radius: 5px; }
+          border-radius: 5px;
+          cursor: pointer; }
       main .cart-items .cart-table .cart-item .item-cell .remove-item-form .remove-item {
         background: #940000;
         color: #fff;
@@ -156,7 +153,8 @@ main {
         border: none;
         padding: 4px 8px;
         text-align: center;
-        border-radius: 10px; }
+        border-radius: 10px;
+        cursor: pointer; }
     main .cart-items .total-cost {
       padding-left: 11.3rem; }
   main .cart-nav {
@@ -172,7 +170,8 @@ main {
         border: none;
         padding: 8px 16px;
         text-align: center;
-        border-radius: 50px; }
+        border-radius: 50px;
+        cursor: pointer; }
     main .cart-nav .checkout {
       flex: 1;
       align-self: center; }

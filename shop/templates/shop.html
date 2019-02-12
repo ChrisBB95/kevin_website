@@ -5,11 +5,17 @@
 
 <main>
     <div class="title-card">
-        <a href="/shop/cart/">
-            <img src="{% static "cart.png"%}" alt="shopping cart" class="shopping-cart">
-        </a>
-        <p class='cart-size' >{{cart_size}}</p>
-        <h1 class="title">Shop</h1>
+        <div class="cart-and-title">
+            <div class="cart-logo">
+                <a href="/shop/cart/">
+                    <img src="{% static "cart.png"%}" alt="shopping cart" class="shopping-cart">
+                </a>
+            </div> 
+            <h1 class="title">Shop</h1>
+        </div>
+        {% if cart_size > 0%}
+            <p class='subtitle' >{{cart_size}} item{% if cart_size != 1 %}s{% endif %} in cart</p>
+        {% endif %}
     </div>
     <div class="product-section">
         {% for product in products %}

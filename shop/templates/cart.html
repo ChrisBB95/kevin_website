@@ -5,11 +5,14 @@
 
 <main>
     <div class="title-card">
-    <a href="/shop/">
-            <img src="{% static "cart.png"%}" alt="shopping cart" class="shopping-cart">
-        </a>
-        <p class='cart-size' >{{cart_size}}</p>
-        <h1 class="title">Cart</h1>
+        <div class="cart-and-title">
+            <div class="cart-logo">
+                <a href="/shop/">
+                    <img src="{% static "cart.png"%}" alt="shopping cart" class="shopping-cart">
+                </a>
+            </div> 
+            <h1 class="title">Cart</h1>
+        </div>
     </div>
 
     <div class="cart-items">

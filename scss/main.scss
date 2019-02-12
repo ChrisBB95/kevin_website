@@ -51,22 +51,20 @@ main {
     padding: 1rem 2rem;
     color: #2b2b2b;
 
-    .shopping-cart {
-      position: absolute;
-      right: 13.7vw;
-      width: 5vw;
-      height: 5vw;
-      margin-right: 1.5rem;
-      margin-top: 0.3rem;
-      background: #fff;
-      border-radius: 15px;
-    }
-    .cart-size {
-      position: absolute;
-      right: 17.5vw;
-      top: 2vw;
-      font-weight: bold;
-      pointer-events: none;
+    .cart-and-title {
+      display: flex;
+      justify-content: flex-end;
+      .cart-logo {
+        flex-basis: 5%;
+        .shopping-cart {
+          height: 6vw;
+          width: 6vw;
+        }
+      }
+
+      .title {
+        flex-basis: 15%;
+      }
     }
 
     .title {
@@ -206,6 +204,7 @@ main {
               padding: 4px 8px;
               text-align: center;
               border-radius: 5px;
+              cursor: pointer;
             }
             .sub-button {
               background: #5b5b5b;
@@ -215,6 +214,7 @@ main {
               padding: 4px 9.5px;
               text-align: center;
               border-radius: 5px;
+              cursor: pointer;
             }
           }
           .remove-item-form {
@@ -226,6 +226,7 @@ main {
               padding: 4px 8px;
               text-align: center;
               border-radius: 10px;
+              cursor: pointer;
             }
           }
         }
@@ -250,6 +251,7 @@ main {
         padding: 8px 16px;
         text-align: center;
         border-radius: 50px;
+        cursor: pointer;
       }
     }
     .checkout {
