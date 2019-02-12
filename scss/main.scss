@@ -116,10 +116,11 @@ main {
       flex-basis: 30%;
       margin: 0.2rem;
 
-      &:first-child {
+      &:first-child,
+      &:nth-child(5n + 7) {
         flex-basis: 90%;
       }
-      &:nth-child(4n + 4) {
+      &:nth-child(5n + 5) {
         flex-basis: 45%;
       }
       .gallery-image {
