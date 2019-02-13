@@ -284,9 +284,14 @@ main {
   .copyright-container {
     width: 45%;
     float: right;
+    text-align: right;
 
     .copyright {
-      float: right;
+    }
+
+    .login {
+      list-style: none;
+      text-decoration: none;
     }
   }
 }

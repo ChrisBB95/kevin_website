@@ -12,6 +12,7 @@ from shop.views import shop_view, add_to_cart, view_cart, remove_from_cart, add_
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls'), name='account'),
     path('', home_view, name='home'),
     path('home/', home_view, name='home'),
     path('gallery/', gallery_view, name='gallery'),

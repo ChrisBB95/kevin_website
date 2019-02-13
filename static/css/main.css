@@ -192,6 +192,8 @@ main {
     float: left; }
   .footer .copyright-container {
     width: 45%;
-    float: right; }
-    .footer .copyright-container .copyright {
-      float: right; }
+    float: right;
+    text-align: right; }
+    .footer .copyright-container .login {
+      list-style: none;
+      text-decoration: none; }
