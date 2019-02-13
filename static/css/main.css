@@ -89,8 +89,38 @@ main {
       main .gallery .gallery-image-container:last-child, main .gallery .gallery-image-container:nth-child(5n + 7) {
         flex-basis: 90%; }
       main .gallery .gallery-image-container .gallery-image {
+        cursor: pointer;
         height: 100%;
         width: 100%; }
+  main .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.9); }
+    main .modal #close {
+      position: fixed;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s; }
+      main .modal #close:hover, main .modal #close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer; }
+    main .modal .modal-content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px; }
   main .product-section .coming-soon {
     margin-left: 1rem; }
   main .product-section .product-container .product-title {
