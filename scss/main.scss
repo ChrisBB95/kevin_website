@@ -100,12 +100,17 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     .video-wrapper {
-      flex-basis: 48%;
+      flex-basis: 50%;
+      flex: 1;
       margin: 0.5rem;
-      position: relative;
       padding-bottom: 25%;
+      position: relative;
       padding-top: 5px;
       height: 0;
+
+      &:only-child {
+        padding-bottom: 56.25%;
+      }
 
       .embedded-vimeo {
         position: absolute;
@@ -145,6 +150,26 @@ main {
         cursor: pointer;
         height: 100%;
         width: 100%;
+      }
+    }
+    @media (max-width: 1080px){
+      .gallery-image-container {
+        flex-basis: 45%;
+
+        &:last-child,
+        &:nth-child(5n + 7) {
+        flex-basis: 45%;
+        }
+      }
+    }
+    @media (max-width: 800px){
+      .gallery-image-container {
+        flex-basis: 90%;
+
+        &:last-child,
+        &:nth-child(5n + 7) {
+        flex-basis: 90%;
+        }
       }
     }
   }

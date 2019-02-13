@@ -71,12 +71,15 @@ main {
     flex-wrap: wrap;
     justify-content: center; }
     main .videos .video-wrapper {
-      flex-basis: 48%;
+      flex-basis: 50%;
+      flex: 1;
       margin: 0.5rem;
-      position: relative;
       padding-bottom: 25%;
+      position: relative;
       padding-top: 5px;
       height: 0; }
+      main .videos .video-wrapper:only-child {
+        padding-bottom: 56.25%; }
       main .videos .video-wrapper .embedded-vimeo {
         position: absolute;
         top: 0;
@@ -104,6 +107,16 @@ main {
         cursor: pointer;
         height: 100%;
         width: 100%; }
+    @media (max-width: 1080px) {
+      main .gallery .gallery-image-container {
+        flex-basis: 45%; }
+        main .gallery .gallery-image-container:last-child, main .gallery .gallery-image-container:nth-child(5n + 7) {
+          flex-basis: 45%; } }
+    @media (max-width: 800px) {
+      main .gallery .gallery-image-container {
+        flex-basis: 90%; }
+        main .gallery .gallery-image-container:last-child, main .gallery .gallery-image-container:nth-child(5n + 7) {
+          flex-basis: 90%; } }
   main .modal {
     display: none;
     position: fixed;
