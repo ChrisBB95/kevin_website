@@ -40,6 +40,11 @@ body {
     a:active {
       color: #0c007c;
     }
+
+    a:hover {
+      color: #0f0099;
+      transition: ease-in 0.25s;
+    }
   }
 }
 
