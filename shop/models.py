@@ -7,10 +7,10 @@ from django.utils.translation import ugettext_lazy as _
 
 
 class Product(models.Model):
-    title = models.CharField(max_length=30, blank=True, null=True)
+    title = models.CharField(max_length=30)
     price = models.DecimalField(max_digits=10, decimal_places=2)
-    description = models.CharField(max_length=200, blank=True, null=True)
-    image = models.ImageField(upload_to="", blank=True, null=True)
+    description = models.CharField(max_length=200)
+    image = models.ImageField(upload_to="")
     item_id = models.IntegerField()
 
     def __str__(self):

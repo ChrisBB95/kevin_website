@@ -4,15 +4,15 @@
 <main class='main'>
     <div class="title-card">
         <h1 class='title'>Kevin Goodman</h1>
-        <h3 class="subtitle">whatever@gmail.com</h3>
-        <h3 class="subtitle">111-222-1234</h3>
+        <h3 class="subtitle">{{bio.email}}</h3>
+        <h3 class="subtitle">{{bio.phone}}</h3>
     </div>
 
     <img class='home-image' src="{{home_image}}" alt="home image">
 
     <div class="about">
-        <h2 class="about-title">About Kevin Or Something</h2>
-        <p clas='about-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores minima debitis sed voluptas accusamus incidunt officiis voluptatibus corporis laudantium omnis dolore cupiditate minus nulla in autem doloribus quam quos delectus ducimus eligendi, consequuntur asperiores magni rem obcaecati? Architecto, voluptatum illo aut iste, fuga laborum asperiores explicabo dolor iure temporibus libero?</p>
+        <h2 class="about-title">About Kevin</h2>
+        <p class='about-text'>{{bio.about_me}}</p>
         <br>
     </div>
 

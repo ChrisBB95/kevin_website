@@ -2,6 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 from .models import Product
+from bio.models import Bio
 from django.conf import settings
 from django.urls import reverse
 from paypal.standard.forms import PayPalPaymentsForm
@@ -11,11 +12,14 @@ def shop_view(request):
     cart = {}
     if request.session.get('cart', {}):
         cart = request.session.get('cart', {})
+    
+    bio = Bio.objects.first()
 
     context = {
         'products': Product.objects.all(),
         'cart': cart,
-        'cart_size': len(cart.items())
+        'cart_size': len(cart.items()),
+        'bio':bio
     }
     if len(cart.items()) > 0:
         context['cart_size'] = sum([value for key, value in cart.items()])
@@ -31,10 +35,13 @@ def add_to_cart(request, item_id):
         cart[str(item_id)] = 1
     request.session['cart'] = cart
 
+    bio = Bio.objects.first()
+
     context = {
         'products': Product.objects.all(),
         'cart': cart,
-        'cart_size': len(cart.items())
+        'cart_size': len(cart.items()),
+        'bio':bio
     }
     if len(cart.items()) > 0:
         context['cart_size'] = sum([value for key, value in cart.items()])
@@ -51,12 +58,15 @@ def view_cart(request):
                          Product.objects.get(item_id=id).price,
                          Product.objects.get(item_id=id).price*quantity,
                          id))
+    
+    bio = Bio.objects.first()
 
     context = {
         'cart': cart,
         'cart_size': len(cart.items()),
         'products': products,
-        'total': sum([product[3] for product in products])
+        'total': sum([product[3] for product in products]),
+        'bio':bio
     }
     if len(cart.items()) > 0:
         context['cart_size'] = sum([value for key, value in cart.items()])
@@ -76,12 +86,15 @@ def remove_from_cart(request, item_id):
                          Product.objects.get(item_id=id).price,
                          Product.objects.get(item_id=id).price*quantity,
                          id))
+    
+    bio = Bio.objects.first()
 
     context = {
         'cart': cart,
         'cart_size': len(cart.items()),
         'products': products,
-        'total': sum([product[3] for product in products])
+        'total': sum([product[3] for product in products]),
+        'bio':bio
     }
     if len(cart.items()) > 0:
         context['cart_size'] = sum([value for key, value in cart.items()])
@@ -101,12 +114,15 @@ def add_one(request, item_id):
                          Product.objects.get(item_id=id).price,
                          Product.objects.get(item_id=id).price*quantity,
                          id))
+    
+    bio = Bio.objects.first()
 
     context = {
         'cart': cart,
         'cart_size': len(cart.items()),
         'products': products,
-        'total': sum([product[3] for product in products])
+        'total': sum([product[3] for product in products]),
+        'bio':bio
     }
     if len(cart.items()) > 0:
         context['cart_size'] = sum([value for key, value in cart.items()])
@@ -129,12 +145,15 @@ def sub_one(request, item_id):
                          Product.objects.get(item_id=id).price,
                          Product.objects.get(item_id=id).price*quantity,
                          id))
+    
+    bio = Bio.objects.first()
 
     context = {
         'cart': cart,
         'cart_size': len(cart.items()),
         'products': products,
-        'total': sum([product[3] for product in products])
+        'total': sum([product[3] for product in products]),
+        'bio': bio
     }
     if len(cart.items()) > 0:
         context['cart_size'] = sum([value for key, value in cart.items()])

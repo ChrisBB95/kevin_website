@@ -7,8 +7,7 @@ from django.utils.translation import ugettext_lazy as _
 
 class Home_Image(models.Model):
     title = models.CharField(max_length=30)
-    image = models.ImageField(
-        upload_to="")
+    image = models.ImageField(upload_to="")
     description = models.CharField(max_length=140)
 
     def __str__(self):
