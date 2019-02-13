@@ -77,12 +77,13 @@ main {
   main .gallery {
     margin: 0 0.5rem;
     display: flex;
-    flex-wrap: wrap; }
+    flex-wrap: wrap-reverse;
+    flex-direction: row-reverse; }
     main .gallery .gallery-image-container {
       flex: 1;
       flex-basis: 30%;
       margin: 0.2rem; }
-      main .gallery .gallery-image-container:first-child, main .gallery .gallery-image-container:nth-child(5n + 7) {
+      main .gallery .gallery-image-container:last-child, main .gallery .gallery-image-container:nth-child(5n + 7) {
         flex-basis: 90%; }
       main .gallery .gallery-image-container .gallery-image {
         height: 100%;
