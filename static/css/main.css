@@ -119,8 +119,8 @@ main {
     main .modal .modal-content {
       margin: auto;
       display: block;
-      width: 80%;
-      max-width: 700px; }
+      max-width: 90%;
+      max-height: 90%; }
   main .product-section .coming-soon {
     margin-left: 1rem; }
   main .product-section .product-container .product-title {
