@@ -17,7 +17,7 @@ body {
   .navbar .nav-list {
     list-style: none;
     float: center;
-    width: 220px;
+    width: 300px;
     padding: 0;
     margin: auto; }
     .navbar .nav-list .nav-item {
@@ -28,7 +28,8 @@ body {
       text-decoration: none;
       color: #000;
       font-weight: 600;
-      padding: 0.7rem; }
+      padding: 0.7rem;
+      font-size: 24px; }
     .navbar .nav-list a:active {
       color: #0c007c; }
     .navbar .nav-list a:hover {
