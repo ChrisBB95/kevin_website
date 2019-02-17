@@ -1,9 +1,10 @@
 import os
 import socket
-# if socket.gethostname() == "Jerry":
-#     from kevkev.local_settings import *
-# else:
-from kevkev.production_settings import *
+if socket.gethostname() == "Jerry":
+    from kevkev.local_settings import *
+else:
+    from kevkev.production_settings import *
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -12,7 +13,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'pd*&+3i-+a+0#(=78lp_4k^j_+g_&c9#@@(lqe*qhj__pxm1lp'
+SECRET_KEY = os.environ.get(
+    'DJANGO_SECRET_KEY', 'pd*&+3i-+a+0#(=78lp_4k^j_+g_&c9#@@(lqe*qhj__pxm1lp')
 
 ALLOWED_HOSTS = ['localhost']
 
