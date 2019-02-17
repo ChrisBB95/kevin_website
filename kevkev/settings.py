@@ -1,5 +1,9 @@
 import os
-
+import socket
+# if socket.gethostname() == "Jerry":
+#     from kevkev.local_settings import *
+# else:
+from kevkev.production_settings import *
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -10,11 +14,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'pd*&+3i-+a+0#(=78lp_4k^j_+g_&c9#@@(lqe*qhj__pxm1lp'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+ALLOWED_HOSTS = ['localhost']
 
-ALLOWED_HOSTS = []
-
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 LOGIN_REDIRECT_URL = '/admin/'
 
 
@@ -126,4 +128,3 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # django-paypal
 PAYPAL_RECEIVER_EMAIL = 'kevingoodmanalaska@gmail.com'
-PAYPAL_TEST = True
