@@ -1,6 +1,6 @@
 import os
 import socket
-if socket.gethostname() == "Jerry":
+if socket.gethostname() in ["Jerry","Tim"]:
     from kevkev.local_settings import *
 else:
     from kevkev.production_settings import *
@@ -13,8 +13,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get(
-    'DJANGO_SECRET_KEY', 'pd*&+3i-+a+0#(=78lp_4k^j_+g_&c9#@@(lqe*qhj__pxm1lp')
+with open('/kevin_website/site/key/key.txt') as f:
+    SECRET_KEY = f.read().strip()
 
 ALLOWED_HOSTS = ['localhost']
 
@@ -74,12 +74,9 @@ WSGI_APPLICATION = 'kevkev.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'kevkev',
-        'USER': 'root',
-        'PASSWORD': '6Uitarman.',
-        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
-        'PORT': '3306',
-    }
+        'OPTIONS': {
+            'read-default-file':'/kevin_website/auth/mysql.cnf',
+        },
 }
 
 
@@ -120,13 +117,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-
+STATIC_ROOT = '/kevin_website/site/public/static'
 STATICFILES_DIRS = [
     (os.path.join(BASE_DIR, "static"))
 ]
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = 'kevin_website/site/public/media'
 
 # django-paypal
 PAYPAL_RECEIVER_EMAIL = 'kevingoodmanalaska@gmail.com'
