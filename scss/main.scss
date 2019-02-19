@@ -76,6 +76,9 @@ main {
         .title {
           font-size: 10vw;
         }
+        .subtitle {
+          font-size: 4vw;
+        }
       }
     }
 
@@ -88,7 +91,7 @@ main {
     .subtitle {
       text-align: right;
       margin: 2px 0;
-      font-size: 4vw;
+      font-size: 2vw;
     }
 
     @media (max-width: 800px) {
@@ -109,6 +112,7 @@ main {
 
       .subtitle {
         text-align: center;
+        font-size: 4vw;
       }
     }
   }

@@ -54,7 +54,9 @@ main {
         flex-basis: 15%; }
       @media (max-width: 800px) {
         main .title-card .cart-and-title .title {
-          font-size: 10vw; } }
+          font-size: 10vw; }
+        main .title-card .cart-and-title .subtitle {
+          font-size: 4vw; } }
     main .title-card .title {
       text-align: right;
       margin: 3px 0;
@@ -62,7 +64,7 @@ main {
     main .title-card .subtitle {
       text-align: right;
       margin: 2px 0;
-      font-size: 4vw; }
+      font-size: 2vw; }
     @media (max-width: 800px) {
       main .title-card .cart-and-title {
         justify-content: center; }
@@ -73,7 +75,8 @@ main {
         text-align: center;
         font-size: 8vw; }
       main .title-card .subtitle {
-        text-align: center; } }
+        text-align: center;
+        font-size: 4vw; } }
   main .home-image {
     display: block;
     width: 99%;
