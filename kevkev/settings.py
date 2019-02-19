@@ -73,8 +73,9 @@ WSGI_APPLICATION = 'kevkev.wsgi.application'
 
 DATABASES = {
     'default': {
+        'ENGINE': 'django.db.backends.mysql',
         'OPTIONS': {
-            'read-default-file': '/kevin_website/auth/mysql.cnf',
+            'read_default_file': '/kevin_website/auth/mysql.cnf',
         },
     }
 }
