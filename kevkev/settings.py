@@ -1,6 +1,6 @@
 import os
 import socket
-if socket.gethostname() in ["Jerry","Tim"]:
+if socket.gethostname() in ["Jerry", "Tim"]:
     from kevkev.local_settings import *
 else:
     from kevkev.production_settings import *
@@ -73,10 +73,10 @@ WSGI_APPLICATION = 'kevkev.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
         'OPTIONS': {
-            'read-default-file':'/kevin_website/auth/mysql.cnf',
+            'read-default-file': '/kevin_website/auth/mysql.cnf',
         },
+    }
 }
 
 
@@ -123,7 +123,7 @@ STATICFILES_DIRS = [
 ]
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = 'kevin_website/site/public/media'
+MEDIA_ROOT = '/kevin_website/site/public/media'
 
 # django-paypal
 PAYPAL_RECEIVER_EMAIL = 'kevingoodmanalaska@gmail.com'
