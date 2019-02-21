@@ -1,3 +1,7 @@
+$big-media: 1440px;
+$med-media: 1080px;
+$small-media: 800px;
+
 * {
   box-sizing: border-box;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -72,7 +76,7 @@ main {
         flex-basis: 15%;
       }
 
-      @media (max-width: 800px) {
+      @media (max-width: $small-media) {
         .title {
           font-size: 10vw;
         }
@@ -94,7 +98,7 @@ main {
       font-size: 2vw;
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: $small-media) {
       .cart-and-title {
         justify-content: center;
         .cart-logo {
@@ -155,7 +159,7 @@ main {
     }
   }
 
-  @media (max-width: 1080px) {
+  @media (max-width: $med-media) {
     .videos {
       display: block;
       width: 100%;
@@ -193,12 +197,12 @@ main {
         width: 100%;
       }
     }
-    @media (max-width: 1080px) {
+    @media (max-width: $med-media) {
       .gallery-image-container {
         flex-basis: 45%;
       }
     }
-    @media (max-width: 800px) {
+    @media (max-width: $small-media) {
       .gallery-image-container {
         flex-basis: 90%;
       }
@@ -246,10 +250,10 @@ main {
       margin-left: 1rem;
     }
     .product-container {
-      @media (min-width: 1200px) {
+      @media (min-width: $big-media) {
         &:first-child {
           .product-separator {
-            margin: 1rem -200px 3rem;
+            margin: 1rem -500px 3rem;
           }
         }
       }
@@ -306,9 +310,9 @@ main {
   .cart-items {
     padding: 1rem;
 
-    @media (min-width: 1200px) {
+    @media (min-width: $big-media) {
       .cart-separator {
-        margin: 1rem -200px 3rem;
+        margin: 1rem -500px 4rem;
       }
     }
 
@@ -406,27 +410,27 @@ main {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: $big-media) {
   .main {
-    width: 1200px;
+    width: $big-media;
     margin: 2.5rem auto;
     .title-card {
       .cart-and-title {
         .cart-logo {
           .shopping-cart {
-            height: 72px;
-            width: 72px;
+            height: 86.4px;
+            width: 86.4px;
           }
         }
         .title {
-          font-size: 60px;
+          font-size: 72px;
         }
       }
       .title {
-        font-size: 60px;
+        font-size: 72px;
       }
       .subtitle {
-        font-size: 24px;
+        font-size: 28.8px;
       }
     }
   }

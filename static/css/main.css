@@ -167,9 +167,9 @@ main {
       max-height: 90%; }
   main .product-section .coming-soon {
     margin-left: 1rem; }
-  @media (min-width: 1200px) {
+  @media (min-width: 1440px) {
     main .product-section .product-container:first-child .product-separator {
-      margin: 1rem -200px 3rem; } }
+      margin: 1rem -500px 3rem; } }
   main .product-section .product-container .product-title {
     margin: 1rem; }
   main .product-section .product-container .product-body {
@@ -201,9 +201,9 @@ main {
         text-align: center; }
   main .cart-items {
     padding: 1rem; }
-    @media (min-width: 1200px) {
+    @media (min-width: 1440px) {
       main .cart-items .cart-separator {
-        margin: 1rem -200px 3rem; } }
+        margin: 1rem -500px 4rem; } }
     main .cart-items .cart-item .quantity-price-container {
       width: 300px; }
     main .cart-items .cart-item .quantity-price-container {
@@ -267,19 +267,19 @@ main {
         margin-top: 0.6rem;
         width: 150px; }
 
-@media (min-width: 1200px) {
+@media (min-width: 1440px) {
   .main {
-    width: 1200px;
+    width: 1440px;
     margin: 2.5rem auto; }
     .main .title-card .cart-and-title .cart-logo .shopping-cart {
-      height: 72px;
-      width: 72px; }
+      height: 86.4px;
+      width: 86.4px; }
     .main .title-card .cart-and-title .title {
-      font-size: 60px; }
+      font-size: 72px; }
     .main .title-card .title {
-      font-size: 60px; }
+      font-size: 72px; }
     .main .title-card .subtitle {
-      font-size: 24px; } }
+      font-size: 28.8px; } }
 
 .footer {
   width: 100%;
