@@ -183,7 +183,8 @@ main {
     main .product-section .product-container .product-body .image-container .product-image {
       max-height: 200px;
       max-width: 200px;
-      border: solid #000 0.1rem; }
+      border: solid #000 0.1rem;
+      cursor: pointer; }
     main .product-section .product-container .product-body .about-product {
       padding-left: 1rem; }
       main .product-section .product-container .product-body .about-product .product-info {
@@ -197,6 +198,7 @@ main {
         main .product-section .product-container .product-body .about-product .product-info .product-description {
           padding-bottom: 4rem; }
       main .product-section .product-container .product-body .about-product .add-to-cart-form .add-to-cart {
+        cursor: pointer;
         display: inline-block;
         background: #2b2b2b;
         color: #fff;

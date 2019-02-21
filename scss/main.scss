@@ -276,6 +276,7 @@ main {
             max-height: 200px;
             max-width: 200px;
             border: solid #000 0.1rem;
+            cursor: pointer;
           }
         }
 
@@ -299,6 +300,7 @@ main {
 
           .add-to-cart-form {
             .add-to-cart {
+              cursor: pointer;
               display: inline-block;
               background: #2b2b2b;
               color: #fff;
