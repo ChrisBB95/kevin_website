@@ -3,7 +3,7 @@
 
 {% block content %}
 
-<main>
+<main class='main'>
     <div class="title-card">
         <div class="cart-and-title">
             <div class="cart-logo">
@@ -20,7 +20,7 @@
     <div class="product-section">
         {% for product in products %}
             <div class="product-container">
-            <hr>
+                <hr class='product-separator'>
                 <h3 class="product-title">{{product.title}}</h3>
                 <div class="product-body">
                     <div class="image-container">
