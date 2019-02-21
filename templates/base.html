@@ -15,7 +15,7 @@
         var modal = document.getElementById('modal');
         var modalImg = document.getElementById('img01');
 
-        var gallery_images = document.getElementsByClassName('gallery-image');
+        var gallery_images = document.querySelectorAll('.gallery-image, .product-image');
         
         for (var i=0;i<gallery_images.length;i++){
             gallery_images[i].addEventListener('click',function(){
@@ -23,9 +23,13 @@
             modalImg.src = this.src;
             })
         }
-        document.getElementById('close').addEventListener('click',function(){
+        var img_and_close = document.querySelectorAll('#close, #img01');
+
+        for (var i=0; i< img_and_close.length; i++){
+            img_and_close[i].addEventListener('click',function(){
             modal.style.display = "none";
-        })
+            })
+        }
     }
     </script>
 </head>
