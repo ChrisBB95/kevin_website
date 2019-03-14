@@ -20,10 +20,3 @@ def home_view(request):
         context['home_image'] = Home_Image.objects.first().image.url
 
     return render(request, 'home.html', context)
-
-
-# link.video = https://vimeo.com/322787092
-
-# desired https://player.vimeo.com/video/322787092
-# for link in vimeo_links
-#   link.video.insert(8,'player.').insert(25,'video/')
