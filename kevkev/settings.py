@@ -11,14 +11,11 @@ MEDIA_URL = '/media/'
 if socket.gethostname() in ["Jerry", "Tim"]:
     MEDIA_ROOT = os.path.join(BASE_DIR, "media")
     from kevkev.local_settings import *
-elif socket.gethostname() in ["kevin-website", ]:
-    STATIC_ROOT = '/kevin_website/site/public/static'
-    MEDIA_ROOT = '/kevin_website/site/public/media'
-    from kevkev.local_settings import *
 else:
     STATIC_ROOT = '/kevin_website/site/public/static'
     MEDIA_ROOT = '/kevin_website/site/public/media'
-    from kevkev.production_settings import *
+    from kevkev.local_settings import *
+    # from kevkev.production_settings import *
 
 
 # Quick-start development settings - unsuitable for production
