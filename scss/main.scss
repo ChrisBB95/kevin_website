@@ -41,10 +41,10 @@ body {
       color: #000;
       font-weight: 600;
       padding: 0.2rem 0.7rem;
-      font-size: 2vw;
+      font-size: 1.8vw;
 
       @media (max-width: $small-media) {
-        font-size: 4vw;
+        font-size: 3.6vw;
       }
     }
 
@@ -93,13 +93,18 @@ main {
     }
 
     .title {
+      text-align: center;
+      margin: 3px 0;
+      font-size: 5vw;
+    }
+    .gallery-title {
       text-align: right;
       margin: 3px 0;
       font-size: 5vw;
     }
 
     .subtitle {
-      text-align: right;
+      text-align: center;
       margin: 2px 0;
       font-size: 2vw;
     }
@@ -115,7 +120,8 @@ main {
         }
       }
 
-      .title {
+      .title,
+      .gallery-title {
         text-align: center;
         font-size: 8vw;
       }
@@ -162,6 +168,11 @@ main {
       grid-template-columns: 1fr;
       .video-wrapper {
         height: 56vw;
+        &:only-child,
+        &:nth-child(odd):last-child {
+          height: 56vw;
+          grid-column: 1;
+        }
       }
     }
   }
