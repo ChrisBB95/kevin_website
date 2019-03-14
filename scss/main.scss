@@ -187,6 +187,7 @@ main {
         cursor: pointer;
         height: 100%;
         width: 100%;
+        object-fit: cover;
       }
     }
     @media (max-width: $med-media) {

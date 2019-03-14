@@ -126,7 +126,8 @@ main {
       main .gallery .gallery-image-container .gallery-image {
         cursor: pointer;
         height: 100%;
-        width: 100%; }
+        width: 100%;
+        object-fit: cover; }
     @media (max-width: 1080px) {
       main .gallery .gallery-image-container {
         flex-basis: 45%; } }
