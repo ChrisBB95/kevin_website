@@ -2,31 +2,20 @@ import os
 import socket
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-STATIC_URL = '/static/'
 STATICFILES_DIRS = [(os.path.join(BASE_DIR, "static"))]
-
+STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
 if socket.gethostname() in ["Jerry", "Tim"]:
-    MEDIA_ROOT = os.path.join(BASE_DIR, "media")
     from kevkev.local_settings import *
 else:
-    STATIC_ROOT = '/kevin_website/site/public/static'
-    MEDIA_ROOT = '/kevin_website/site/public/media'
-    from kevkev.local_settings import *
-    # from kevkev.production_settings import *
+    from kevkev.production_settings import *
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
 with open('/kevin_website/site/key/key.txt') as f:
     SECRET_KEY = f.read().strip()
 
 ALLOWED_HOSTS = ['localhost', '104.248.211.19',
-                 '.kevinwgoodman.com', 'kevinwgoodman.com']
+                 'www.kevinwgoodman.com', 'kevinwgoodman.com']
 
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 LOGIN_REDIRECT_URL = '/admin/'
@@ -122,6 +111,3 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
-# django-paypal
-PAYPAL_RECEIVER_EMAIL = 'kevingoodmanalaska@gmail.com'
