@@ -99,7 +99,7 @@ main {
       align-self: center;
       width: 100%;
       height: 28vw; }
-      main .videos .video-wrapper:only-child {
+      main .videos .video-wrapper:only-child, main .videos .video-wrapper:nth-child(odd):last-child {
         height: 56vw;
         grid-column: 1/3; }
       main .videos .video-wrapper .embedded-vimeo {
