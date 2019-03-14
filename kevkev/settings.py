@@ -1,12 +1,17 @@
 import os
 import socket
-if socket.gethostname() in ["Jerry", "Tim"]:
-    from kevkev.local_settings import *
-else:
-    from kevkev.production_settings import *
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+if socket.gethostname() in ["Jerry", "Tim"]:
+    # STATIC_ROOT = os.path.join(BASE_DIR, "static")
+    MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+    from kevkev.local_settings import *
+else:
+    STATIC_ROOT = '/kevin_website/site/public/static'
+    MEDIA_ROOT = '/kevin_website/site/public/media'
+    from kevkev.production_settings import *
 
 
 # Quick-start development settings - unsuitable for production
@@ -118,13 +123,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = '/kevin_website/site/public/static'
+#STATIC_ROOT = '/kevin_website/site/public/static'
 STATICFILES_DIRS = [
     (os.path.join(BASE_DIR, "static"))
 ]
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = '/kevin_website/site/public/media'
+#MEDIA_ROOT = '/kevin_website/site/public/media'
 
 # django-paypal
 PAYPAL_RECEIVER_EMAIL = 'kevingoodmanalaska@gmail.com'
