@@ -28,7 +28,8 @@ else:
 with open('/kevin_website/site/key/key.txt') as f:
     SECRET_KEY = f.read().strip()
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['localhost', '104.248.211.19',
+                 '.kevinwgoodman.com', 'kevinwgoodman.com']
 
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 LOGIN_REDIRECT_URL = '/admin/'
